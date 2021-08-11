@@ -1,0 +1,6 @@
+{
+  "name": "Farma DB for Android",
+  "description": "This is a WikiFarma DB service on Heroku.",
+  "repository": "https://github.com/super88a/farma-android-service",
+  "addons" : [ "heroku-postgresql" ]
+}
