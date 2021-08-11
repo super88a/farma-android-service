@@ -4,7 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-Class ObtRepositoryImpl implements ObtRepository {
+public class ObtRepositoryImpl implements ObtRepository {
 
 	@PersistenceContext
   private EntityManager em;

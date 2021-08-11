@@ -11,7 +11,8 @@ import java.util.List;
 @RequestMapping("/obat")
 public class ObtController {
 
-  private ObtRepository repository;
+  //private ObtRepository repository;
+	private ObtRepositoryImpl repository;
 
   @Autowired
   public ObtController(ObtRepository repository) {
