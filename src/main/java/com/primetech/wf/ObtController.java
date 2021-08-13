@@ -12,7 +12,7 @@ import java.util.List;
 public class ObtController {
 
   //private ObtRepository repository;
-	private ObtRepositoryImpl repository;
+	private ObtRepository repository;
 
   @Autowired
   public ObtController(ObtRepository repository) {
