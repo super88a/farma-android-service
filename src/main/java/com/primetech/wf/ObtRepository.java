@@ -7,6 +7,6 @@ import java.util.List;
 @Repository
 public interface ObtRepository extends JpaRepository<Obt, Long> {
 
-	public List<Obt> findByNama(String nama);
+	public Obt findByNama(String nama);
 
 }
