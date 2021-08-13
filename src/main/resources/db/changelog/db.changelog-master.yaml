@@ -23,12 +23,12 @@ databaseChangeLog:
                   type: varchar(1023)
                   constraints:
                     nullable: true   
-							- column:
+              - column:
                   name: aturanPakai
                   type: varchar(1023)
                   constraints:
                     nullable: true                       
-							- column:
+              - column:
                   name: efekSp
                   type: varchar(1023)
                   constraints:
