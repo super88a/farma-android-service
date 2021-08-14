@@ -19,6 +19,18 @@ public class Obt {
 	private String indikasi;
   private String aturan;
 	private String efek;
+	
+	public Obt() {
+	}
+	
+	
+	public Obt(String nama, String indikasi, String aturan, String efek) {
+	  
+	  this.nama = nama;
+	  this.indikasi = indikasi;
+	  this.aturan = aturan;
+	  this.efek = efek;
+	}
 
   public Long getId() {
     return id;

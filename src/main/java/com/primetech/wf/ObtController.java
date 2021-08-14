@@ -44,6 +44,24 @@ public class ObtController {
     repository.save(obt);
     return get(obt.getId());
   }
+  
+  @RequestMapping("/init")
+  @ResponseBody
+  String hello() {
+  
+    repository.save(new Obt("Mikonazol", 
+        "Infeksi jamur pada vagina, mulut, kulit, Kandidiasis, tinea corporis, tinea pedis, tinea versicolor, kandisosis kutis",
+        "2x sehari (pagi dan malam)",
+        "Iritasi dan rasa terbakar (burning). Bila iritasi terjadi, segera hentikan penggunaan krim/ salep") );
+        
+    repository.save(new Obt("Griseofulvin", 
+	      "Infeksi jamur pada kulit, kulit kepala, rambut, kuku",
+	      "sesuai resep",
+	      "Diare, sakit kepala, tidak nyaman pada lambung, pusing, kelelahan") );
+
+    return "DB is initialized.";
+  }
+  
 
   @RequestMapping
   public List<Obt> all() {
