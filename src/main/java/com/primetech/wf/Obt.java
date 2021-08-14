@@ -39,7 +39,7 @@ public class Obt {
   }
   
   public String getAturan() {
-    return aturanPakai;
+    return aturan;
   }
   public void setAturan(String aturanPakai) {
     this.aturan = aturanPakai;
