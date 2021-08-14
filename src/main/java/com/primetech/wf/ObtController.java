@@ -28,7 +28,7 @@ public class ObtController {
     return new ResponseEntity<Obt>(obt, HttpStatus.OK);
   }
   
-  /*
+  
   @RequestMapping(value = "/{nama}", method = RequestMethod.GET)
   public ResponseEntity<Obt> get(@PathVariable("nama") String nama) {
     Obt obt = repository.findByNama(nama);
@@ -37,7 +37,7 @@ public class ObtController {
     }
     return new ResponseEntity<Obt>(obt, HttpStatus.OK);
   }
-  */
+  
 
   @RequestMapping(value = "/new", method = RequestMethod.POST)
   public ResponseEntity<Obt> update(@RequestBody Obt obt) {
