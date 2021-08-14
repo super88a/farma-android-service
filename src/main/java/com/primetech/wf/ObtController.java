@@ -29,7 +29,7 @@ public class ObtController {
   }
   
   
-  @RequestMapping(value = "/{nama}", method = RequestMethod.GET)
+  @RequestMapping(value = "/nama/{nama}", method = RequestMethod.GET)
   public ResponseEntity<Obt> get(@PathVariable("nama") String nama) {
     Obt obt = repository.findByNama(nama);
     if (null == obt) {
