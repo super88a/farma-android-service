@@ -17,8 +17,8 @@ public class Obt {
   @NotEmpty
   private String nama;
 	private String indikasi;
-  private String aturanPakai;
-	private String efekSp;
+  private String aturan;
+	private String efek;
 
   public Long getId() {
     return id;
@@ -38,17 +38,17 @@ public class Obt {
     this.indikasi = indikasi;
   }
   
-  public String getAturanPakai() {
+  public String getAturan() {
     return aturanPakai;
   }
-  public void setAturanPakai(String aturanPakai) {
-    this.aturanPakai = aturanPakai;
+  public void setAturan(String aturanPakai) {
+    this.aturan = aturanPakai;
   }  
   
-  public String getEfekSp() {
-    return efekSp;
+  public String getEfek() {
+    return efek;
   }
-  public void setEfekSp(String efekSp) {
-    this.efekSp = efekSp;
+  public void setEfek(String efekSp) {
+    this.efek = efekSp;
   } 
 }
