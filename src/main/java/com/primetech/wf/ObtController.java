@@ -59,7 +59,7 @@ public class ObtController {
 	      "sesuai resep",
 	      "Diare, sakit kepala, tidak nyaman pada lambung, pusing, kelelahan") );
 
-    return "DB is initialized.";
+    return "DB has been initialized.";
   }
   
 
