@@ -8,6 +8,6 @@ import java.util.List;
 public interface ObtRepository extends JpaRepository<Obt, Long> {
 
 	public Obt findByNama(String nama);
-	public List<Obt> findByNamaLike(String nama);
+	public List<Obt> findByNamaContaining(String nama);
 
 }
