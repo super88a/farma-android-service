@@ -38,6 +38,15 @@ public class ObtController {
     return new ResponseEntity<Obt>(obt, HttpStatus.OK);
   }
   
+  @RequestMapping(value = "/namalike/{nama}", method = RequestMethod.GET)
+  public ResponseEntity<Obt> get(@PathVariable("nama") String nama) {
+    Obt obt = repository.findByNamaLike(nama);
+    if (null == obt) {
+      return new ResponseEntity<Obt>(HttpStatus.NOT_FOUND);
+    }
+    return new ResponseEntity<Obt>(obt, HttpStatus.OK);
+  }
+  
 
   @RequestMapping(value = "/new", method = RequestMethod.POST)
   public ResponseEntity<Obt> update(@RequestBody Obt obt) {
@@ -49,16 +58,12 @@ public class ObtController {
   @ResponseBody
   String hello() {
   
-    repository.save(new Obt("Mikonazol", 
-        "Infeksi jamur pada vagina, mulut, kulit, Kandidiasis, tinea corporis, tinea pedis, tinea versicolor, kandisosis kutis",
-        "2x sehari (pagi dan malam)",
-        "Iritasi dan rasa terbakar (burning). Bila iritasi terjadi, segera hentikan penggunaan krim/ salep") );
+    repository.save(new Obt("Nystatin drop (Nystatin 100.000 Unit/mL)", 
+        "Kandidiasis pada mulut",
+        "Obat diminum bersamaan dengan makanan. Ikuti aturan pakai dengan rutin dan penuh sesuai periode pengobatan yang diresepkan",
+        "gangguan perut, diare, mual, iritasi") );
         
-    repository.save(new Obt("Griseofulvin", 
-	      "Infeksi jamur pada kulit, kulit kepala, rambut, kuku",
-	      "sesuai resep",
-	      "Diare, sakit kepala, tidak nyaman pada lambung, pusing, kelelahan") );
-
+    
     return "DB has been initialized.";
   }
   
