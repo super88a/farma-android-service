@@ -39,8 +39,8 @@ public class ObtController {
   }
   
   @RequestMapping(value = "/namalike/{namaLike}", method = RequestMethod.GET)
-  public ResponseEntity<List<Obt>> get(@PathVariable("namaLike") String namaLike) {
-    List<Obt> obt = repository.findByNamaLike(nama);
+  public ResponseEntity<List<Obt>> getLike(@PathVariable("namaLike") String namaLike) {
+    List<Obt> obt = repository.findByNamaLike(namaLike);
     if (null == obt) {
       return new ResponseEntity<List<Obt>>(HttpStatus.NOT_FOUND);
     }
